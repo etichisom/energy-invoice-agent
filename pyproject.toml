@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "energy-invoice-agent"
+version = "0.1.0"
+description = "Energy invoice extraction and reconciliation agent: evals, MCP tool surface, tenant-isolated guardrails."
+requires-python = ">=3.11"
+dependencies = ["pdfplumber>=0.11", "pydantic>=2.6", "anthropic>=0.40", "mcp>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "reportlab>=4"]
+
+[project.scripts]
+invoice-evals = "invoice_agent.evals:main"
+invoice-mcp = "invoice_agent.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
