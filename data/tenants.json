@@ -1,0 +1,8 @@
+{
+  "acme-steel": {
+    "contract_price_eur_per_kwh": 0.142
+  },
+  "brugge-cold-storage": {
+    "contract_price_eur_per_kwh": 0.1585
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "demo-acme-analyst": {"user": "lotte@acme-steel.example", "tenant": "acme-steel", "role": "analyst"},
+  "demo-acme-reviewer": {"user": "pieter@acme-steel.example", "tenant": "acme-steel", "role": "reviewer"},
+  "demo-cold-reviewer": {"user": "an@brugge-cold-storage.example", "tenant": "brugge-cold-storage", "role": "reviewer"}
+}
