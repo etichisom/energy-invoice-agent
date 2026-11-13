@@ -1,0 +1,194 @@
+{
+  "extractor": "heuristic",
+  "model": null,
+  "date": "2026-11-13",
+  "n_invoices": 32,
+  "headline": {
+    "field_accuracy": 0.9615,
+    "invoice_exact_match": 0.75,
+    "billing_error_recall": 0.65,
+    "billing_error_precision": 1.0,
+    "silent_errors": 0,
+    "billing_errors_reaching_review": 1.0,
+    "auto_accept_rate": 0.5938
+  },
+  "per_field": {
+    "supplier": 1.0,
+    "invoice_number": 1.0,
+    "ean": 1.0,
+    "invoice_date": 1.0,
+    "period_start": 1.0,
+    "period_end": 1.0,
+    "consumption_kwh": 0.75,
+    "energy_cost": 0.75,
+    "grid_fees": 1.0,
+    "taxes_levies": 1.0,
+    "total_excl_vat": 1.0,
+    "vat_amount": 1.0,
+    "total_incl_vat": 1.0
+  },
+  "per_supplier": {
+    "GridHub": {
+      "field_accuracy": 0.8462,
+      "invoice_exact_match": 0.0,
+      "n": 8
+    },
+    "NordWatt Supply": {
+      "field_accuracy": 1,
+      "invoice_exact_match": 1.0,
+      "n": 8
+    },
+    "Voltaris Energie": {
+      "field_accuracy": 1,
+      "invoice_exact_match": 1.0,
+      "n": 8
+    },
+    "\u00c9nergie Lumen": {
+      "field_accuracy": 1,
+      "invoice_exact_match": 1.0,
+      "n": 8
+    }
+  },
+  "detection": {
+    "price_above_contract": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "tp": 4,
+      "fp": 0,
+      "fn": 1
+    },
+    "totals_do_not_add_up": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    }
+  },
+  "cost": {
+    "model_calls": 0,
+    "share_needing_model": 0.0,
+    "retries": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "est_cost_eur": null,
+    "latency_p50_s": 0.0082,
+    "latency_max_s": 0.0136
+  },
+  "silent_error_invoices": [],
+  "errors": [],
+  "failures": [
+    {
+      "invoice_id": "gridhub-03-013",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 17013.0,
+          "want": 40031.0
+        },
+        "energy_cost": {
+          "got": 17013.0,
+          "want": 6045.68
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-04-014",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 22227.0,
+          "want": 38265.0
+        },
+        "energy_cost": {
+          "got": 22227.0,
+          "want": 5433.62
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-05-015",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 16902.0,
+          "want": 34620.0
+        },
+        "energy_cost": {
+          "got": 16902.0,
+          "want": 4915.6
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-06-016",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 34214.0,
+          "want": 55243.0
+        },
+        "energy_cost": {
+          "got": 34214.0,
+          "want": 7845.51
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-03-029",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 18690.0,
+          "want": 41519.0
+        },
+        "energy_cost": {
+          "got": 18690.0,
+          "want": 6580.7
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-04-030",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 29896.0,
+          "want": 35535.0
+        },
+        "energy_cost": {
+          "got": 29896.0,
+          "want": 5632.48
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-05-031",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 6125.0,
+          "want": 24836.0
+        },
+        "energy_cost": {
+          "got": 6125.0,
+          "want": 3935.71
+        }
+      }
+    },
+    {
+      "invoice_id": "gridhub-06-032",
+      "supplier": "GridHub",
+      "wrong": {
+        "consumption_kwh": {
+          "got": 13858.0,
+          "want": 29589.0
+        },
+        "energy_cost": {
+          "got": 13858.0,
+          "want": 4689.67
+        }
+      }
+    }
+  ]
+}
